@@ -1,0 +1,74 @@
+//Android//
+  Basically to bulit UI there are three process
+  a)By Using Java
+  b)By Coding Xml
+  c)By USing LayOut Editing
+  
+  We Sholud always USe RelativeLayout in xml format as app will automatically adjust wrt screen size.
+  MainActivity is the sub class of AppCompatActivity which the subclass of Activity
+  MainActivity->AppCompatActivity->Activity
+  for using all the components of AppCompatActivity in Main Activity we need to use inherit i.e. MainActivity extends AppCompatActivity
+
+  //Log
+  Logging is a process by which we can create a Log File.It is basically a record of events that happen on a system.especiaally in android.
+  It is the record of message that both the Android Platform and the apps create while they are running.
+  For Using Log we have need to Import import android.util.Log;
+  Android has Six Log Level
+    Assert(.a)
+    Error(.e)
+    Warn(ing) (.w)
+    Info(.i)
+    Debug(.d)
+    Verbose(.v)
+    The log level assert has highest severity meaning that if you filter on the assert level other log will be displayed that are below that assert level
+    to create log we have to use 
+    private static final Variable_name = MainActivity.class.getSimpleName();//this is unique for a particular java file
+    we can name it anything like rajatMessage instead MainActivity.class.getSimpleName() as this is for indentifying the log
+    now for using log write
+    Log.i(Variable_name,"String which you want to be displayed in the android monitor");
+
+  //
+  To connect xml with the java file we need to write
+  setContentView(R.layout.xml_file_name); inside onCreate method
+  R is a class name
+  layout is a method
+
+  //TODO
+  TODO statements also called TODO Comments exists to help a programmer to create a list of tasks that require addititonal attention
+  for using it write inside comments and then write TODO
+  
+  //Launcher
+  suppose if there are more than one xml file inside any app then to launch a particular xml file first we have to write these inside AndroidManifest.xml
+  <category android:name="android.intent.category.LAUNCHER" > inside intent-filter
+  
+  
+//JAVA//
+
+  //OverRiding Methods-if a class inherits a method from super class,then there is chance of overiding methof provided i.e. not marked final keyword
+  suppose a sub class inhertis a super class then overriding method(in sub class) are those method having same name, same arguments, same return type\
+  excess level cannot be more restricted than overriding method 
+  i.e.if superclass method-Public then sub class overriding method canot be private or protected
+  A method declared final cannot be Overridden
+  
+  //static(an non-acess-modifier) variable
+  static variable can be used to refer the common property of all objects (that is not unique for each object) e.g. company name of employees,college name of students etc.
+  
+  //final(an non-acess-modifier) variable
+  If you make any variable as final, you cannot change the value of final variable on later code (It will be constant).
+  
+  //super
+  super keyword can also be used to invoke parent class method. It should be used if subclass contains the same method as parent class. In other words, it is used if method is overridden
+  
+  //public(an acess-modifier)
+  visible to the whole world
+  
+  //private(an acess-modifier)
+  visible to the same-class in which it is define not visible to subclass but not package
+  class and interface cannot be private
+  variables that are decalred private can be access outside the class if public getter method are present in the class
+  
+  //protected(an acess-modifier)
+  visible to the all except non-subclass in other package
+  
+  //default(an acess-modifier)
+  visible to the all except non-subclass in other package and subclass in other package
