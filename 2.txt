@@ -1,5 +1,66 @@
 //Android//
 
-To create UI From JAVA
+To create UI From JAVA we have to write JavaUI code inside onCreate method only
+ //Create Layout
+  To create a layout we have to import it'a property
+  import android.widget.RelativeLayout;
+  we have to make object for using RelativeLayout property from android package
+  RelativeLayout layout_name = new RelativeLayout(this);
+  To set the background color of the layout use setBackgroundColor() method
+  layout_name.setBackgroundColor(Color.name_of_color_in_android);
+//Create Button
+  To create a Button we have to import it'a property
+  import android.widget.Button;
+  we have to make object for using Button property from android package
+  Button button_name = new Button(this);
+  To set the text inside the button we have to use setText() method
+    button_name.setText("Name");
+  We can also give backgroundcolr to the button by using setBackgroundColor() method
+//Create Input Text
+  To create a InputText we have to import it'a property
+  import android.widget.EditText;
+  we have to make object for using input text property from android package
+  EditText input = new EditText(this);
+//Id
+  To set id of each widget we have to use setId() method for e.g
+  input.setId(1);
+//To Specifies how a view is positioned within a RelativeLayout
+  for this we have to use LayoutParam method
+  for height and width we have to first make object for each widget
+  RelativeLayout.LayoutParams buttonDetails = new RelativeLayout.LayoutParams(height,width);
+  for height and width we have to WRAP_CONTENT (the view wants to be just large enough to fit its own internal content, taking its own     padding into account)
+  height or width = RelativeLayout.LayoutParams.WRAP_CONTENT
+//To set alignment of widget
+  First make object of RelativeLayout.LayoutParams
+  TO set alignment of widget addRule() method is used
+  To get the id of any widget we have to use getId() method
+  To set any widget above another  widget then RelativeLayout.ABOVE is used wrt to anotherwidget id for e.g.
+  inputDetails.addRule(RelativeLayout.ABOVE,buttonDetails.getId());
+  To make any widget center horizontally or vertically use RelativeLayout.CENTER_HORIZONTAL or RelativeLayout.CENTER_VERTICAL inside       addRule() method
+  To set the margin for any widget use setMargin method setMargin method takes four paramter or one parameter left,top,right,bottom
+//Convert DIP(Device independent pixel) into px
+  TO make it posiible we have to import it's property
+  import android.content.re.Resources;
+  import android.util.TypedValue;
+  For getting information about screen we have to use getResource() method
+  Resource r = getResource();
+  For converting DIP into px TypedValue.applyDimension method is used
+  TypedValue.applyDimension it takes three parameter
+  TypedValue.applyDimension(unit which we want to convert,size of the input which we want to be in dip,information about screen)
+  TypedValue.COMPLEX_UNIT_DIP this is the unit  we are converting
+  r.getDisplayMetrics() gives the information about the screen
+  After this we shold typecast the value into int obtained from TypedValue.applyDimension method as px takes Integer value only
+//To Set the width of the input
+  For setting the width of the input text we have to use setWidth() method and it takes only integer value
+//Adding to the layout
+  For this we use addView() method and takes two parameter
+  To add Widget we have to use addView(widget_name_which_you_want_to_Add,width_height_set_by_layout) method
+//To use this button and layout in user activity interface we have to use method name
+     setContentView(layout_name);
 
-
+  
+  
+  
+  
+  
+  
