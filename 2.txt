@@ -62,17 +62,19 @@ To create UI From JAVA we have to write JavaUI code inside onCreate method only
 //JAVA
    //Constructor 
      These are the method having same name as that of class
-     Every class has a constructor. If we do not explicitly write a constructor for a class, the Java compiler builds a default constructor for that class.
+     Every class has a constructor. If we do not explicitly write a constructor for a class, the Java compiler builds a default              constructor for that class.
    //Object
     Objects are basically created to use the Constructor defined outside the another method  and this is done by using new Keyword
     To Create a object
-    Suppose there are two method one is main method from which the execution begins and another is puppy method(basicallly a Constructor) The class name is also Puppy
+    Suppose there are two method one is main method from which the execution begins and another is puppy method(basicallly a                 Constructor) The class name is also Puppy
     To use the Code of puppy method inside the main method we have to create Object
     write inside the main method
     Puppy new_name = new Puppy();
     Supposse a method which is not a constructor is also there we need to use it for them dot(.) is used
     new_name.method_which_is_not_constructor_but_define_outside_main_method();
-     
+   //this(Learn it)
+      if we have to use one object in multiple classes then we have to use this keyword
+      
   
   
   
