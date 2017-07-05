@@ -1,0 +1,52 @@
+//Android
+ //To Link Java with xml
+  For linking any widget with java we need to give reference by id for this a method finViewById() method id used
+  To Linking Text in xml with java we need to import it's property
+  import android.widget.TextView;
+  Then we have to give refernce in java 
+  TextView text_name = (TextView) findViewById(R.id.idname_which_is_given_to_text_in_xml);
+  Also for using others widget from xml to java we have to also import ther property too.
+  import android.widget.Button;
+  import android.widget.EditText;
+  Then we have to give refernce in java
+  Button button_name = (Button) findViewById(R.id.idname_which_is_given_to_button_in_xml);
+  EditText edit  = (EditText) findViewByid(R.id.idname_which_is_given_to_edittext_in_xml);
+//OnClick()
+  Suppose if we want to run some code after clicking a button then for this we have to use setOnClickListener() method
+  button_name.setOnClickListener(
+    new Button.OnClickListener(){
+      //here we have to use override method
+      public void onClick(View view){
+        //code which we want to run after clicking the button
+      }
+    }
+  );
+  To use onClick function we need import something to use it
+  import android.view.View
+  
+//onLongClick()
+  Suppose if we want to run some code after clicking long a button then for this we have to use setOnLongClickListener() method
+  button_name.setOnLongClickListener(
+    new Button.OnLongClickListener(){
+      //here we have override it's method
+      public boolean onLongClick(){
+         //code which we want to run after clicking the button for long
+         return true;
+      }
+    }
+  );
+  
+//to set the text of xml from java
+  for setting the text in xml from java we have to use setText() method
+  text_name.setText("Text which we want");
+//for geeting text from the input
+  Supoose if user write something in the input Box then we have to grabb it for this we have to use getText() and then we have to convert it into String
+  String edit = edit.getText().toString();
+  
+//Java
+  //toString()
+      it is used to convert any thing into string
+  
+  
+  
+  
