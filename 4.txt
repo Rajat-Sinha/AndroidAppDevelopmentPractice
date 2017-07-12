@@ -1,0 +1,70 @@
+//Android//
+  //To use Flinging and Scrolling Events
+  All these we have to write inside onCreate method
+    TO use Such type of Events we have to use GestureMotion
+    To use it we have to import it's property
+    To use Motion Event Scrolling use import android.view.MotionEvent
+    To detect scrolling through screen import android.view.GestureDetector
+    Also import android.support.v4.view.GestureDetectorCompact;
+    For Flinging and scolling in overall screen we have to implements interface such as GestureDetector.OnGestureListener
+    For Listening for double tap we will implements GetureDetector.OnDoubleTapListener;
+    To use gesture we have to first assign a variable first
+    modifiers GestureDtectorCompact name;
+    then we have to make object for GestureDetectorCompact
+    this.name = new GestureDetectorCompact(this,this); this is used basicaaly to detect gesture
+    for using double tap name.setOnDoubleTapListener(this);
+  Now For motion we have to use override methods
+    For detetcing when user touches the screen we have to use override-method onTouchEvent() and to detect whether the touch is
+    gesture or not we have to use this.gesture.onTouchEvent(event);   
+  Some Override method for motion
+    onSingleTapConfirmed
+    onDoubleTap
+    onDoubleTapEvent
+    onDown
+    onShowPress
+    onSingleTapUp
+    onScroll
+    onLongPress
+    onFling
+//Java
+  //Interface + implements
+    This is similar to java.
+    But it is a collection of abstract method and final fields
+    A class implements an interfaces threby inherting the abstract method of the interfaces
+    The interface keyword is used to declare an interface
+    An interface does not contain constructor but it can extend multiple interfaces.
+    A interface method declartion will contain a list of methods without any body statement
+    interfaces are used as superclass whose properties are inherited by class for this we use implements keyword
+    EG.
+      interface Animal {
+         public void eat();
+         public void travel();
+      }
+      public class MammalInt implements Animal {
+
+         public void eat() {
+            System.out.println("Mammal eats");
+         }
+
+         public void travel() {
+            System.out.println("Mammal travels");
+         } 
+
+         public int noOfLegs() {
+            return 0;
+         }
+
+         public static void main(String args[]) {
+            MammalInt m = new MammalInt();
+            m.eat();
+            m.travel();
+         }
+      } 
+   //Abstraction
+    Abstraction is a process of hiding the implementation details and showing only functionality to the user. 
+    Another way, it shows only important things to the user and hides the internal details for example sending sms, you just type the text and send the message.
+    You don't know the internal processing about the message delivery.
+    for this abstract keyword is used
+    Abstraction lets you focus on what the object does instead of how it does it.
+    
+    
